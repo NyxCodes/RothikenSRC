@@ -1,0 +1,90 @@
+/* Rothiken - A Legendary Quest.cpp
+	Created by Jason Bradnick 
+	10.17.14
+	23:37 PM
+
+*/
+#include "stdafx.h"
+#include "COLORLIBS.h"
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
+
+main:
+	SetConsoleTextAttribute(h, 15 | FOREGROUND_INTENSITY);
+	system("cls");
+	int money = 0;
+	int health = 100;
+	int MAINSCREENNUM;
+	string input;
+	cout << " " << endl;
+	cout << " //==\\\\" << endl;
+	cout << " ||  ||  _____________________" << endl;
+	cout << " ||===\\\\                      |" << endl;
+	cout << " ||    \\\\ O  T  H  I  K  E  N |" << endl;
+	cout << "                              |" << endl;
+	cout << " ________ A LEGENDARY QUEST __|" << endl;
+	cout << "  " << endl;
+	cout << "       1...   START GAME" << endl;
+	cout << "       2...   LOAD GAME" << endl;
+	cout << "       3...   OPTIONS" << endl;
+	cin >> MAINSCREENNUM;
+	if (MAINSCREENNUM == 1) {
+		goto newgame;
+	}
+	system("pause");
+	return 0;
+
+newgame:
+	system("cls");
+	cout << "Hello there, young traveler!" << endl;
+	cout << "What is your name? Tell me and you may pass." 
+
+<< endl;
+	cout << "> ";
+	cin >> input;
+	cin.clear();
+	system("cls");
+	cout << input << ", what a strange name! But you may 
+
+pass." << endl;
+	cout << "Good luck on your adventure into Rothiken, " << 
+
+input << "!" << endl;
+	system("pause");
+
+	system("cls");
+	cout << "Choose a class:" << endl;
+	cout << "    [WARRIOR] STATS -- HEALTH (85) ARMOR (10) 
+
+DAMAGE (8) WEAPON (SWORD)" << endl;
+	SetConsoleTextAttribute(h, FOREGROUND_RED | 
+
+FOREGROUND_INTENSITY);
+	cout << "     INFO *Heads straight into battle taking 
+
+most enemies out*" << endl;
+	SetConsoleTextAttribute(h, 15 | FOREGROUND_INTENSITY);
+	cout << "    [ASSASSIN] STATS -- HEALTH (60) ARMOR (0) 
+
+DAMAGE (4) WEAPON (SMALL KNIFE)" << endl;
+	SetConsoleTextAttribute(h, FOREGROUND_RED | 
+
+FOREGROUND_INTENSITY);
+	cout << "     INFO *Takes enemies out quickly and 
+
+silently, you are not to be seen." << endl;
+    SetConsoleTextAttribute(h, 15 | FOREGROUND_INTENSITY);
+	cout << "    [RANGER] STATS -- HEALTH (30) ARMOR (2) 
+
+DAMAGE (6) WEAPON (BOW)" << endl;
+	cout << "    [PREIST]" << endl;
+	cout << "" << endl;
+	system("pause");
+	goto main;
+}
+
